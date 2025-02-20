@@ -1,0 +1,25 @@
+{
+  "name": "nextjs-unused-file-finder",
+  "version": "1.0.1",
+  "description": "A tool to find unused fles, functions and dependencies in your Nextjs 15 app router (JavaScript/TypeScript files) project.",
+  "bin": {
+    "unused-finder": "./index.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "glob": "^10.3.0"
+  },
+  "type": "module",
+  "keywords": [
+    "unused",
+    "dependencies",
+    "finder",
+    "clean-code"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
