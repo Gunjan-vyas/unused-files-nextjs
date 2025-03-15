@@ -91,7 +91,6 @@ const findUnusedFiles = (baseDir) => {
 };
 
 const baseDir = process.cwd();
-console.log({ baseDir }, process.argv[2], process.cwd());
 console.log(chalk.blue(`Scanning directory: ${baseDir}`));
 
 const unusedDeps = findUnusedDependencies(baseDir);
