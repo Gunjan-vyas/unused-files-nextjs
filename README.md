@@ -1,18 +1,19 @@
-# Unused Packages Finder
+# Next.js Unused File Finder
 
 ## Overview
 
-`nextjs-unused-file-finder` is a CLI tool designed specifically for **Next.js** projects to identify unused dependencies, functions, and files. It helps developers keep their codebase clean by detecting unnecessary imports and functions that are no longer in use.
+`nextjs-unused-file-finder` is a powerful **CLI tool** designed to help developers **find unused files, dependencies, and functions** in **Next.js 13+ (App Router and beyond)**. By identifying unnecessary code, this tool helps you keep your project **lean, optimized, and maintainable**.
 
 ## Features
 
-- **Find unused dependencies** from `package.json`
-- **Detect unused functions** across JavaScript and TypeScript files
-- **Identify unused files** in the project (excluding Next.js-specific files under `src/app/**`)
+- 🛠 **Find unused files** across your Next.js project (excluding Next.js-specific files in `src/app/**`)
+- 📦 **Detect unused dependencies** in `package.json`
+- 🔍 **Identify unused functions** within JavaScript and TypeScript files
+- ⚡ **Works with Next.js 13+ (App Router and above)**
 
 ## Installation
 
-You can install the package globally using NPM:
+Install the package globally via NPM:
 
 ```sh
 npm install -g nextjs-unused-file-finder
@@ -20,30 +21,36 @@ npm install -g nextjs-unused-file-finder
 
 ## Usage
 
-Run the following command inside your Next.js project root:
+### Scan Your Next.js Project
+
+Run the following command in your project root:
 
 ```sh
 unused-finder
 ```
 
-Or specify a directory to scan:
+### Scan a Specific Directory
+
+Specify a directory to analyze:
 
 ```sh
 unused-finder /path/to/project
 ```
 
-Or specify a the file to be run:
+### Run the File Directly
+
+If needed, execute the tool directly via:
 
 ```sh
-node /path/to/node_module/unused-finder/file
+node /path/to/node_modules/unused-finder/file
 ```
 
 ## How It Works
 
-1. **Scans all JavaScript/TypeScript files** in the project
-2. **Extracts imported dependencies and functions**
-3. **Compares against `package.json` and function calls** to detect unused items
-4. **Lists out unused files**, excluding Next.js routing files under `src/app/**`
+1. 📂 **Scans all JavaScript & TypeScript files** in your Next.js project
+2. 📑 **Extracts imported dependencies and functions**
+3. 📊 **Compares against `package.json` & function calls** to detect unused items
+4. 🚀 **Lists out unused files, excluding Next.js routing files under `src/app/**`\*\*
 
 ## Example Output
 
@@ -65,19 +72,26 @@ Unused files found:
 
 ## Ignored Files
 
-The following Next.js-specific files are **automatically ignored**:
+By default, `nextjs-unused-file-finder` **automatically ignores** certain Next.js-specific files:
 
 - `middleware.ts`
 - `layout.tsx`
 - `global.css`
 - `template.tsx`
+- **All files inside `src/app/**`\*\* (since they may be used via Next.js routing)
 
-Additionally, files under `src/app/**` are not considered unused (since they may be used via Next.js routing).
+## Why Use This Tool?
+
+✅ **Improve Performance** – Reduce unnecessary dependencies and files ✅ **Optimize Build Times** – Remove unused code for faster builds ✅ **Enhance Maintainability** – Keep your Next.js 13+ project clean and structured ✅ **Easy to Use** – Just run a single command to detect unused code
 
 ## Contributing
 
-Feel free to open issues and submit pull requests to improve the tool!
+We welcome contributions! Feel free to open issues or submit pull requests to improve the tool. 🚀
 
 ## License
 
-MIT License
+Released under the **MIT License**.
+
+---
+
+📢 **Get started now and optimize your Next.js 13+ project with `nextjs-unused-file-finder`!**
